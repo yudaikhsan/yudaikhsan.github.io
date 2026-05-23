@@ -1,9 +1,4 @@
-/* styles.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     display: flex;
@@ -12,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Sidebar */
 .sidebar {
     width: 280px;
     background: #1e2a3a;
@@ -26,30 +20,11 @@ body {
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
-.profile {
-    text-align: center;
-    margin-bottom: 25px;
-}
+.profile { text-align: center; margin-bottom: 25px; }
+.profile img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #ecf0f1; margin-bottom: 10px; }
+.profile h2 { font-size: 1.4rem; margin-bottom: 5px; }
+.profile p { font-size: 0.9rem; color: #bdc3c7; }
 
-.profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #ecf0f1;
-    margin-bottom: 10px;
-}
-
-.profile h2 {
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.profile p {
-    font-size: 0.9rem;
-    color: #bdc3c7;
-}
-
-/* Social links – all icons perfectly aligned */
 .social-links {
     display: flex;
     justify-content: center;
@@ -68,85 +43,31 @@ body {
     height: 30px;
     transition: color 0.2s;
 }
+.social-links a:hover { color: #3498db; }
 
-.social-links a:hover {
-    color: #3498db;
-}
-
-/* Bluesky icon – custom SVG, optically matched to FA icons */
 .social-links .bluesky {
     font-size: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530"><path fill="%23ecf0f1" d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.017-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>') no-repeat center;
     background-size: contain;
     width: 24px;
     height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
 }
 
-.contact-info {
-    margin: 20px 0;
-    padding-top: 15px;
-    border-top: 1px solid #34495e;
-}
+.contact-info { margin: 20px 0; padding-top: 15px; border-top: 1px solid #34495e; }
+.contact-info p { margin: 8px 0; font-size: 0.9rem; }
+.contact-info i { width: 20px; margin-right: 5px; }
 
-.contact-info p {
-    margin: 8px 0;
-    font-size: 0.9rem;
-}
+.nav-section { margin-top: 20px; border-top: 1px solid #34495e; padding-top: 15px; }
+.nav-section h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; color: #3498db; }
+.nav-section ul { list-style: none; }
+.nav-section ul li { margin: 8px 0; }
+.nav-section ul li a { color: #ecf0f1; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+.nav-section ul li a:hover { color: #3498db; }
 
-.contact-info i {
-    width: 20px;
-    margin-right: 5px;
-}
-
-/* Navigation sections */
-.nav-section {
-    margin-top: 20px;
-    border-top: 1px solid #34495e;
-    padding-top: 15px;
-}
-
-.nav-section h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    color: #3498db;
-}
-
-.nav-section ul {
-    list-style: none;
-}
-
-.nav-section ul li {
-    margin: 8px 0;
-}
-
-.nav-section ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-}
-
-.nav-section ul li a:hover {
-    color: #3498db;
-}
-
-/* Main content */
-.main-content {
-    margin-left: 280px;
-    padding: 40px;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.main-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #1e2a3a;
-}
-
-.main-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
+.main-content { margin-left: 280px; padding: 40px; width: 100%; min-height: 100vh; }
+.main-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: #1e2a3a; }
+.main-content p { font-size: 1.1rem; line-height: 1.6; }
