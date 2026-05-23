@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>This is my website hosted on GitHub Pages for free.</p>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <!-- Profile -->
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo">
+            <h2>Your Name</h2>
+            <p>Web Developer & Researcher</p>
+        </div>
+
+        <!-- Social Links -->
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+            <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+        </div>
+
+        <!-- Clickable Article List -->
+        <nav class="nav-section">
+            <h3><i class="fas fa-file-alt"></i> Articles</h3>
+            <ul>
+                <li><a href="articles/article1.html" target="_blank">Article 1: Introduction to AI</a></li>
+                <li><a href="articles/article2.html" target="_blank">Article 2: Web Dev Tips</a></li>
+                <li><a href="articles/article3.html" target="_blank">Article 3: Data Science Basics</a></li>
+            </ul>
+        </nav>
+
+        <!-- Clickable Research List -->
+        <nav class="nav-section">
+            <h3><i class="fas fa-flask"></i> Research</h3>
+            <ul>
+                <li><a href="research/research1.html" target="_blank">Research 1: Quantum Computing</a></li>
+                <li><a href="research/research2.html" target="_blank">Research 2: Climate Modeling</a></li>
+                <li><a href="research/research3.html" target="_blank">Research 3: NLP Study</a></li>
+            </ul>
+        </nav>
+
+        <!-- Clickable Projects List -->
+        <nav class="nav-section">
+            <h3><i class="fas fa-code"></i> Projects</h3>
+            <ul>
+                <li><a href="projects/project1.html" target="_blank">Project 1: Portfolio Site</a></li>
+                <li><a href="projects/project2.html" target="_blank">Project 2: Weather App</a></li>
+                <li><a href="projects/project3.html" target="_blank">Project 3: Chatbot</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a passionate developer and researcher. Explore my articles, research, and projects using the sidebar.</p>
+        <p>Each link opens a dedicated page in a new tab.</p>
+    </main>
+
 </body>
 </html>
