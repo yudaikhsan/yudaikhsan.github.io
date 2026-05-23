@@ -3,133 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Scholar on Fire</title>
+
+    <!-- Favicon (graduation cap) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 10L10 30l40 20 40-20L50 10zM20 45l30 15 30-15v15l-30 15L20 60V45z' fill='%23333'/></svg>">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root {
-            --bg: #f4f6f9;
-            --text: #333;
-            --sidebar-bg: #1e2a3a;
-            --sidebar-text: #ecf0f1;
-            --sidebar-hover: #3498db;
-            --icon-color: #ecf0f1;
-            --border-color: #34495e;
-            --accent: #3498db;
-            --card-bg: #ffffff;
-        }
-        .dark-mode {
-            --bg: #1a1a2e;
-            --text: #e0e0e0;
-            --sidebar-bg: #16213e;
-            --sidebar-text: #e0e0e0;
-            --sidebar-hover: #0f3460;
-            --icon-color: #e0e0e0;
-            --border-color: #0f3460;
-            --accent: #e94560;
-            --card-bg: #16213e;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            display: flex;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .sidebar {
-            width: 280px;
-            background: var(--sidebar-bg);
-            color: var(--sidebar-text);
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-y: auto;
-            padding: 30px 20px 20px;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-        }
-        .profile { text-align: center; margin-bottom: 25px; }
-        .profile img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--sidebar-text); margin-bottom: 10px; }
-        .profile h2 { font-size: 1.4rem; margin-bottom: 5px; }
-        .profile p { font-size: 0.9rem; color: #bdc3c7; }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        .social-links a {
-            color: var(--icon-color);
-            text-decoration: none;
-            font-size: 1.5rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            transition: color 0.2s, transform 0.2s;
-        }
-        .social-links a:hover { color: var(--accent); transform: scale(1.1); }
-        .social-links .bluesky {
-            font-size: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530"><path fill="%23ecf0f1" d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.017-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>') no-repeat center;
-            background-size: contain;
-            width: 24px;
-            height: 24px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            top: 1px;
-        }
-        .contact-info { margin: 20px 0; padding-top: 15px; border-top: 1px solid var(--border-color); }
-        .contact-info p { margin: 8px 0; font-size: 0.9rem; }
-        .contact-info i { width: 20px; margin-right: 8px; color: var(--accent); }
-        .nav-section-link {
-            display: block;
-            margin-top: 20px;
-            padding: 12px 0;
-            border-top: 1px solid var(--border-color);
-            color: var(--sidebar-text);
-            text-decoration: none;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.2s, padding-left 0.2s;
-        }
-        .nav-section-link i { width: 24px; margin-right: 8px; color: var(--accent); }
-        .nav-section-link:hover { color: var(--accent); padding-left: 4px; }
-        .dark-mode-toggle {
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-        }
-        .dark-mode-toggle button {
-            background: none;
-            border: none;
-            color: var(--sidebar-text);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.2s, transform 0.2s;
-        }
-        .dark-mode-toggle button:hover { color: var(--accent); transform: scale(1.1); }
-        .main-content {
-            margin-left: 280px;
-            padding: 40px;
-            width: 100%;
-            min-height: 100vh;
-            background-color: var(--bg);
-        }
-        .main-content h1 { font-size: 2.5rem; margin-bottom: 20px; color: var(--text); }
-        .main-content p { font-size: 1.1rem; line-height: 1.6; }
-        /* Dark mode adjustments for inline SVGs */
-        .dark-mode .social-links a svg { fill: var(--icon-color); }
-        .dark-mode .social-links .bluesky { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530"><path fill="%23e0e0e0" d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.017-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>'); }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <aside class="sidebar">
@@ -154,9 +34,11 @@
             </a>
             <!-- Bluesky -->
             <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" class="bluesky" aria-label="Bluesky" title="Bluesky"></a>
-            <!-- Google Scholar -->
+            <!-- Google Scholar (correct academic icon) -->
             <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" aria-label="Google Scholar" title="Google Scholar">
-                <svg width="24" height="24" viewBox="0 0 512 512" fill="currentColor"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.4 445.1 338.5 512 256 512s-149.4-66.9-149.4-149.4c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7l94.4-163.4c2.5-4.3 5.1-8.5 7.9-12.6c2.9-4.3 6.1-8.4 9.5-12.2c7.5-8.4 17.3-13.8 28.1-13.8s20.6 5.4 28.1 13.8c3.4 3.8 6.6 7.9 9.5 12.2c2.8 4.1 5.4 8.3 7.9 12.6l94.4 163.4c2 3.5 3.9 7.1 5.6 10.7zm-40.5 64.1c-4.2-13.3-11.5-25.1-20.9-34.7c-13.4-13.8-31.1-21.4-50.6-21.4s-37.2 7.6-50.6 21.4c-9.4 9.6-16.7 21.4-20.9 34.7c-4.2 13.3-6.4 27.6-6.4 42.8c0 42.9 34.9 77.8 77.8 77.8s77.8-34.9 77.8-77.8c0-15.2-2.2-29.5-6.4-42.8zm-46.3-42.8c-8.5-8.7-19.3-13.3-31.6-13.3s-23.1 4.6-31.6 13.3c-4.1 4.2-7.3 9.1-9.6 14.7c-2.3 5.6-3.8 11.7-4.5 18.1h91.6c-.7-6.4-2.2-12.5-4.5-18.1c-2.3-5.6-5.5-10.5-9.6-14.7z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.7 6.3l-7.7-4c-.6-.3-1.4-.3-2 0l-8 4c-.6.3-1 .9-1 1.6v8c0 .7.4 1.3 1 1.6l8 4c.6.3 1.4.3 2 0l8-4c.6-.3 1-.9 1-1.6v-8c0-.7-.4-1.3-1-1.6zM12 4.2l6 3v1.5l-6-3-6 3V7.2l6 3zm-5 4.5l5 2.5 5-2.5v3l-5 2.5-5-2.5V8.7z"/>
+                </svg>
             </a>
         </div>
 
@@ -198,7 +80,6 @@
         const icon = toggleBtn.querySelector('i');
         const body = document.body;
 
-        // Check for saved user preference
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark-mode');
             icon.classList.replace('fa-moon', 'fa-sun');
