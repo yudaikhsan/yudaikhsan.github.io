@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles – Scholar on Fire</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Simple page-specific styling for the article list -->
+    <style>
+        .articles-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        .articles-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1e2a3a;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .article-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .article-item:last-child {
+            border-bottom: none;
+        }
+        .article-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .article-title {
+            font-size: 1.4rem;
+            margin: 0 0 8px 0;
+        }
+        .article-title a {
+            color: #1e2a3a;
+            text-decoration: none;
+        }
+        .article-title a:hover {
+            color: #3498db;
+        }
+        .article-excerpt {
+            color: #555;
+            line-height: 1.5;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style="display: block; background: #f4f6f9;">
+
+    <div class="articles-container">
+        <h1>📄 All Articles</h1>
+
+        <!-- Newest first – duplicate this block for each article -->
+        <div class="article-item">
+            <div class="article-date">May 24, 2026</div>
+            <h2 class="article-title"><a href="articles/article3.html">Article 3: Data Science Basics</a></h2>
+            <p class="article-excerpt">An introduction to data science concepts, tools, and the data analysis workflow.</p>
+        </div>
+
+        <div class="article-item">
+            <div class="article-date">April 10, 2026</div>
+            <h2 class="article-title"><a href="articles/article2.html">Article 2: Web Dev Tips</a></h2>
+            <p class="article-excerpt">A collection of practical tips for modern web development, from performance to accessibility.</p>
+        </div>
+
+        <div class="article-item">
+            <div class="article-date">March 1, 2026</div>
+            <h2 class="article-title"><a href="articles/article1.html">Article 1: Introduction to AI</a></h2>
+            <p class="article-excerpt">Explore the fundamentals of artificial intelligence and its real-world applications.</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+</body>
+</html>
