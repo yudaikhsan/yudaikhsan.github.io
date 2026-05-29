@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research – Scholar on Fire</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .page-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+        .page-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1e2a3a;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .item-card {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .item-card:last-of-type {
+            border-bottom: none;
+        }
+        .item-tag {
+            display: inline-block;
+            background: #eaf4fb;
+            color: #3498db;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .item-title {
+            font-size: 1.4rem;
+            margin: 0 0 8px 0;
+        }
+        .item-title a {
+            color: #1e2a3a;
+            text-decoration: none;
+        }
+        .item-title a:hover {
+            color: #3498db;
+        }
+        .item-excerpt {
+            color: #555;
+            line-height: 1.6;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            color: #1e2a3a;
+        }
+    </style>
+</head>
+<body style="display: block; background: #f4f6f9;">
+
+    <div class="page-container">
+        <h1>🔬 Research</h1>
+
+        <div class="item-card">
+            <span class="item-tag">Quantum Computing</span>
+            <h2 class="item-title"><a href="research/research1.html">Research 1: Quantum Computing</a></h2>
+            <p class="item-excerpt">Exploring the principles of quantum mechanics applied to computational systems, including qubits, superposition, and entanglement-based algorithms.</p>
+        </div>
+
+        <div class="item-card">
+            <span class="item-tag">Climate Science</span>
+            <h2 class="item-title"><a href="research/research2.html">Research 2: Climate Modeling</a></h2>
+            <p class="item-excerpt">A deep dive into numerical climate simulation techniques, atmospheric data processing, and predictive modeling for environmental forecasting.</p>
+        </div>
+
+        <div class="item-card">
+            <span class="item-tag">NLP</span>
+            <h2 class="item-title"><a href="research/research3.html">Research 3: NLP Study</a></h2>
+            <p class="item-excerpt">An investigation into natural language processing methods, covering tokenization, transformers, and real-world text classification tasks.</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+</body>
+</html>
