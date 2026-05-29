@@ -26,14 +26,14 @@ body {
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
-/* Site title - placed above profile */
+/* Site title */
 .site-title {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #f39c12;               /* warm gold/orange */
+    color: #f39c12;
     margin-bottom: 25px;
     text-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
     font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
@@ -62,7 +62,7 @@ body {
     color: #bdc3c7;
 }
 
-/* Social links – flexbox aligned */
+/* Social links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -109,6 +109,29 @@ body {
 .contact-info i {
     width: 20px;
     margin-right: 5px;
+}
+
+/* Articles nav link — was missing, caused unstyled link */
+.nav-section-title {
+    display: block;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #34495e;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.nav-section-title:hover {
+    color: #f39c12;
+}
+
+.nav-section-title i {
+    margin-right: 6px;
 }
 
 /* Navigation sections */
