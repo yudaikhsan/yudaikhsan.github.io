@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research — Your Name</title>
+  <title>Research - Your Name</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <div class="nav-overlay" id="navOverlay" onclick="closeDrawer()"></div>
   <nav class="nav-drawer" id="navDrawer">
     <ul>
@@ -21,84 +20,61 @@
       <li><a href="contact.html" onclick="closeDrawer()">Contact</a></li>
     </ul>
   </nav>
-
   <header class="navbar">
     <button class="hamburger" id="hamburgerBtn" onclick="toggleDrawer()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <a href="index.html" class="navbar-brand">YOUR NAME</a>
   </header>
-
   <div class="page-header" style="background:var(--bg-alt)">
     <div class="container">
       <h1>Research</h1>
     </div>
   </div>
-
   <section>
     <div class="container">
-
       <div class="cv-section">
         <h2>Working Papers</h2>
       </div>
-
       <div class="research-card">
         <div class="research-card-body">
           <h3><a href="#">Paper Title One</a></h3>
           <p>Full abstract of your research paper. Describe the research question, methodology, and main findings clearly.</p>
-          <div class="tag-links">
-            <a href="#" class="tag-link">PDF</a>
-            <a href="#" class="tag-link">Slides</a>
-            <a href="#" class="tag-link">Code</a>
-          </div>
+          <div class="tag-links"><a href="#" class="tag-link">PDF</a><a href="#" class="tag-link">Slides</a><a href="#" class="tag-link">Code</a></div>
         </div>
       </div>
-
       <div class="research-card">
         <div class="research-card-body">
           <h3><a href="#">Paper Title Two</a></h3>
           <p>Full abstract of your research paper. Describe the research question, methodology, and main findings clearly.</p>
-          <div class="tag-links">
-            <a href="#" class="tag-link">PDF</a>
-            <a href="#" class="tag-link">Slides</a>
-          </div>
+          <div class="tag-links"><a href="#" class="tag-link">PDF</a><a href="#" class="tag-link">Slides</a></div>
         </div>
       </div>
-
       <div class="cv-section" style="margin-top:2.5rem">
         <h2>Published Papers</h2>
       </div>
-
       <div class="research-card">
         <div class="research-card-body">
           <h3><a href="#">Published Paper Title</a></h3>
           <p><em>Journal Name, Volume(Issue), Year</em></p>
-          <p>Full abstract of your published paper. Describe the research question, methodology, and main findings.</p>
-          <div class="tag-links">
-            <a href="#" class="tag-link">DOI</a>
-            <a href="#" class="tag-link">PDF</a>
-          </div>
+          <p>Full abstract of your published paper.</p>
+          <div class="tag-links"><a href="#" class="tag-link">DOI</a><a href="#" class="tag-link">PDF</a></div>
         </div>
       </div>
-
       <div class="cv-section" style="margin-top:2.5rem">
         <h2>Work in Progress</h2>
       </div>
-
       <div class="research-card">
         <div class="research-card-body">
           <h3>Work in Progress Title</h3>
           <p>Brief description of your ongoing research project.</p>
         </div>
       </div>
-
     </div>
   </section>
-
   <footer>
     <p>&copy; <span id="year"></span> Your Name &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
   </footer>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     function toggleDrawer() {
