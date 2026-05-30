@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="nav-overlay" id="navOverlay" onclick="closeDrawer()"></div>
+  <nav class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="index.html" onclick="closeDrawer()">Home</a></li>
+      <li><a href="posts.html" onclick="closeDrawer()">Posts</a></li>
+      <li><a href="research.html" onclick="closeDrawer()">Research</a></li>
+      <li><a href="projects.html" onclick="closeDrawer()">Projects</a></li>
+      <li><a href="cv.html" onclick="closeDrawer()">CV</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="navbar">
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleDrawer()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="navbar-brand">YOUR NAME</a>
+  </header>
+
+  <div class="page-header" style="background:var(--bg-alt)">
+    <div class="container">
+      <h1>Contact</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <div class="contact-info">
+          <p>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            City, Country
+          </p>
+          <p>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:yourname@university.edu">yourname@university.edu</a>
+          </p>
+          <p>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Department Name, University Name
+          </p>
+        </div>
+
+        <div class="social-links" style="justify-content:flex-start;margin-bottom:2rem">
+          <a href="https://substack.com/@yourhandle" target="_blank" rel="noopener" title="Substack">S</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" title="LinkedIn">in</a>
+          <a href="https://x.com/yourhandle" target="_blank" rel="noopener" title="X">&#120143;</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-
