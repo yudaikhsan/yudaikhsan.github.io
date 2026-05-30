@@ -1,70 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholar on Fire</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Academic Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <aside class="sidebar">
-        <!-- Site title -->
-        <div class="site-title">Scholar on Fire</div>
+  <!-- NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay" onclick="closeDrawer()"></div>
 
-        <!-- Profile -->
-        <div class="profile">
-            <img src="https://via.placeholder.com/150" alt="Profile Photo">
-            <h2>Your Name</h2>
-            <p>Web Developer & Researcher</p>
-        </div>
+  <!-- SIDE DRAWER -->
+  <nav class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="index.html" onclick="closeDrawer()">Home</a></li>
+      <li><a href="posts.html" onclick="closeDrawer()">Posts</a></li>
+      <li><a href="research.html" onclick="closeDrawer()">Research</a></li>
+      <li><a href="courses.html" onclick="closeDrawer()">Courses</a></li>
+      <li><a href="cv.html" onclick="closeDrawer()">CV</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Contact</a></li>
+    </ul>
+  </nav>
 
-        <!-- Social Links -->
-        <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/yourhandle" target="_blank" aria-label="X"><i class="fab fa-twitter"></i></a>
-            <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" class="bluesky" aria-label="Bluesky"></a>
-        </div>
+  <!-- TOP NAVBAR -->
+  <header class="navbar">
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleDrawer()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="navbar-brand">YOUR NAME</a>
+  </header>
 
-        <!-- Contact -->
-        <div class="contact-info">
-            <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
-            <p><i class="fas fa-envelope"></i> your.email@example.com</p>
-        </div>
+  <!-- HERO / ABOUT -->
+  <section class="hero">
+    <div class="container">
 
-        <!-- Clickable Articles heading -->
-        <a href="articles.html" class="nav-section-title">
-            <i class="fas fa-file-alt"></i> Articles
+      <!-- PHOTO: leave blank or add your photo here -->
+      <div class="hero-photo">
+        <!-- To add your photo: replace the text below with:
+             <img src="photo.jpg" alt="Your Name"> -->
+        Photo
+      </div>
+
+      <!-- SOCIAL MEDIA LINKS -->
+      <div class="social-links">
+        <a href="https://substack.com/@yourhandle" target="_blank" rel="noopener" title="Substack">S</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://x.com/yourhandle" target="_blank" rel="noopener" title="X / Twitter">𝕏</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/></svg>
         </a>
+        <a href="https://bsky.app/profile/yourhandle" target="_blank" rel="noopener" title="Bluesky">🦋</a>
+      </div>
 
-        <!-- Research -->
-        <nav class="nav-section">
-            <h3><i class="fas fa-flask"></i> Research</h3>
-            <ul>
-                <li><a href="research/research1.html" target="_blank">Research 1: Quantum Computing</a></li>
-                <li><a href="research/research2.html" target="_blank">Research 2: Climate Modeling</a></li>
-                <li><a href="research/research3.html" target="_blank">Research 3: NLP Study</a></li>
-            </ul>
-        </nav>
+      <!-- BIO -->
+      <div class="hero-bio">
+        <p>Write your bio here. Describe your academic background, research interests, and affiliations.</p>
+        <p>Add a second paragraph about your work, publications, or teaching interests.</p>
+      </div>
 
-        <!-- Projects -->
-        <nav class="nav-section">
-            <h3><i class="fas fa-code"></i> Projects</h3>
-            <ul>
-                <li><a href="projects/project1.html" target="_blank">Project 1: Portfolio Site</a></li>
-                <li><a href="projects/project2.html" target="_blank">Project 2: Weather App</a></li>
-                <li><a href="projects/project3.html" target="_blank">Project 3: Chatbot</a></li>
-            </ul>
-        </nav>
-    </aside>
+      <a href="cv.html" class="btn-outline">Download CV</a>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <h1>Welcome to Scholar on Fire</h1>
-        <p>This is your personal portfolio. Explore articles, research, and projects using the sidebar navigation.</p>
-    </main>
+    </div>
 
+    <!-- Mountain SVG Divider -->
+    <div class="mountain-divider">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.15;">
+        <polyline points="0,80 80,40 160,65 260,15 360,55 440,25 540,60 620,10 720,50 800,20 880,55 960,30 1040,60 1120,25 1200,50 1200,80" fill="none" stroke="#003f5c" stroke-width="1.5"/>
+        <polyline points="0,80 60,55 140,70 240,30 320,65 420,35 500,70 580,20 680,60 760,30 840,65 920,40 1000,70 1080,35 1160,60 1200,45 1200,80" fill="none" stroke="#003f5c" stroke-width="1"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- POSTS PREVIEW -->
+  <section id="posts" style="background:var(--bg-alt)">
+    <div class="container">
+      <h2 class="section-title">Posts</h2>
+      <div class="card-list">
+
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="posts.html">Post Title One</a></h3>
+            <p>Short description of the post. What is it about and why it's interesting to your audience.</p>
+            <div class="card-meta">
+              <span>Jan 15, 2025</span>
+              <span>10 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="posts.html">Post Title Two</a></h3>
+            <p>Short description of the post. What is it about and why it's interesting to your audience.</p>
+            <div class="card-meta">
+              <span>Dec 10, 2024</span>
+              <span>8 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="posts.html">Post Title Three</a></h3>
+            <p>Short description of the post. What is it about and why it's interesting to your audience.</p>
+            <div class="card-meta">
+              <span>Nov 5, 2024</span>
+              <span>12 min read</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a href="posts.html" class="see-all-link">See all posts</a>
+    </div>
+  </section>
+
+  <!-- RESEARCH PREVIEW -->
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <div class="card-list">
+
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="research.html">Research Paper Title One</a></h3>
+            <p>Brief abstract or description of your research paper. What question does it address and what is the main finding.</p>
+            <div class="tag-links">
+              <a href="#" class="tag-link">PDF</a>
+              <a href="#" class="tag-link">Slides</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="research.html">Research Paper Title Two</a></h3>
+            <p>Brief abstract or description of your research paper. What question does it address and what is the main finding.</p>
+            <div class="tag-links">
+              <a href="#" class="tag-link">PDF</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a href="research.html" class="see-all-link">See all research</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleDrawer() {
+      document.getElementById('navDrawer').classList.toggle('open');
+      document.getElementById('navOverlay').classList.toggle('open');
+      document.getElementById('hamburgerBtn').classList.toggle('open');
+    }
+    function closeDrawer() {
+      document.getElementById('navDrawer').classList.remove('open');
+      document.getElementById('navOverlay').classList.remove('open');
+      document.getElementById('hamburgerBtn').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
+  </script>
 </body>
 </html>
