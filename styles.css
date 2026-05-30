@@ -122,12 +122,11 @@ img { max-width: 100%; display: block; }
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
 
 section { padding: 4rem 0; }
-section:nth-child(even) { background: var(--bg-alt); }
 
 .section-title {
   font-size: 1.8rem;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
   color: var(--dark);
 }
@@ -172,7 +171,7 @@ section:nth-child(even) { background: var(--bg-alt); }
   background: var(--primary);
   color: #fff;
   border-radius: 6px;
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: background 0.2s, transform 0.2s;
@@ -180,6 +179,14 @@ section:nth-child(even) { background: var(--bg-alt); }
 }
 
 .social-links a:hover { background: var(--dark); transform: translateY(-2px); text-decoration: none; }
+
+.social-links a i,
+.social-links a svg {
+  font-size: 1rem;
+  line-height: 1;
+  width: 16px;
+  height: 16px;
+}
 
 .hero-bio { max-width: 600px; margin: 0 auto 2rem; font-size: 1rem; }
 .hero-bio p { margin-bottom: 1rem; }
@@ -198,14 +205,6 @@ section:nth-child(even) { background: var(--bg-alt); }
 }
 
 .btn-outline:hover { background: var(--primary); color: #fff; text-decoration: none; }
-
-/* Mountain SVG divider */
-.mountain-divider {
-  width: 100%;
-  height: 80px;
-  overflow: hidden;
-  margin-top: 1rem;
-}
 
 /* ===== POST / RESEARCH CARDS ===== */
 .card-list { display: flex; flex-direction: column; gap: 2.5rem; }
@@ -234,9 +233,7 @@ section:nth-child(even) { background: var(--bg-alt); }
 .card-body h3 a { color: var(--dark); }
 .card-body h3 a:hover { color: var(--primary); text-decoration: none; }
 .card-body p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
-.card-meta { font-size: 0.8rem; color: var(--text-muted); }
-.card-meta span::before { content: "·"; margin: 0 0.4rem; }
-.card-meta span:first-child::before { content: ""; margin: 0; }
+.card-meta { font-size: 0.8rem; color: var(--text-muted); display: flex; gap: 1rem; }
 
 .see-all-link {
   display: inline-flex;
@@ -252,7 +249,22 @@ section:nth-child(even) { background: var(--bg-alt); }
 
 .see-all-link::after { content: "›"; font-size: 1rem; }
 
-/* ===== RESEARCH / PROJECT CARDS ===== */
+/* ===== RESEARCH / PROJECT TAG LINKS ===== */
+.tag-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tag-link {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.15s, color 0.15s;
+}
+.tag-link:hover { background: var(--primary); color: #fff; text-decoration: none; }
+
+/* ===== RESEARCH / PROJECT CARDS (detail pages) ===== */
 .research-card {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -277,34 +289,6 @@ section:nth-child(even) { background: var(--bg-alt); }
 .research-card-body h3 a { color: var(--dark); }
 .research-card-body h3 a:hover { color: var(--primary); text-decoration: none; }
 .research-card-body p { font-size: 0.9rem; margin-bottom: 0.75rem; }
-.tag-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.tag-link {
-  display: inline-block;
-  padding: 0.2rem 0.75rem;
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  border-radius: 3px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: background 0.15s, color 0.15s;
-}
-.tag-link:hover { background: var(--primary); color: #fff; text-decoration: none; }
-
-/* ===== COURSES PAGE ===== */
-.course-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  transition: box-shadow 0.2s;
-}
-.course-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-.course-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; }
-.course-card h3 a { color: var(--dark); }
-.course-card h3 a:hover { color: var(--primary); text-decoration: none; }
-.course-card p { font-size: 0.9rem; color: var(--text-muted); }
 
 /* ===== CV PAGE ===== */
 .cv-section { margin-bottom: 2.5rem; }
@@ -314,6 +298,27 @@ section:nth-child(even) { background: var(--bg-alt); }
 .cv-entry-title { font-weight: 700; font-size: 0.95rem; }
 .cv-entry-date { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
 .cv-entry-sub { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+/* ===== CONTACT SECTION (homepage) ===== */
+.contact-simple {
+  max-width: 440px;
+}
+
+.contact-simple p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.contact-icon {
+  color: var(--primary);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
 
 /* ===== CONTACT PAGE ===== */
 .contact-wrapper { max-width: 520px; margin: 0 auto; }
@@ -381,11 +386,4 @@ footer a:hover { color: var(--primary); }
 @media (max-width: 400px) {
   .container { padding: 0 1rem; }
   section { padding: 2.5rem 0; }
-}
-
-
-/* ===== FONT AWESOME SOCIAL ICONS ===== */
-.social-links a i {
-  font-size: 1rem;
-  line-height: 1;
 }
