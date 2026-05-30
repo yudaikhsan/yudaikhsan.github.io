@@ -7,7 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
       <li><a href="research.html" onclick="closeDrawer()">Research</a></li>
       <li><a href="projects.html" onclick="closeDrawer()">Projects</a></li>
       <li><a href="cv.html" onclick="closeDrawer()">CV</a></li>
-      <li><a href="contact.html" onclick="closeDrawer()">Contact</a></li>
+      <li><a href="#contact" onclick="closeDrawer()">Contact</a></li>
     </ul>
   </nav>
   <header class="navbar">
@@ -32,20 +32,23 @@
     <div class="container">
       <div class="hero-photo"></div>
       <div class="social-links">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" title="LinkedIn" aria-label="linkedin">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" title="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://x.com/yourhandle" target="_blank" rel="noopener" title="X / Twitter" aria-label="twitter">
-          <i class="fab fa-twitter"></i>
+        <a href="https://x.com/yourhandle" target="_blank" rel="noopener" title="X (Twitter)">
+          <i class="fa-brands fa-x-twitter"></i>
         </a>
-        <a href="https://github.com/yudaikhsan" target="_blank" rel="noopener" title="GitHub" aria-label="github">
+        <a href="https://github.com/yudaikhsan" target="_blank" rel="noopener" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://substack.com/@yourhandle" target="_blank" rel="noopener" title="Substack" aria-label="substack">
-          <i class="fas fa-rss"></i>
+        <a href="https://substack.com/@yourhandle" target="_blank" rel="noopener" title="Substack">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
         </a>
-        <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" rel="noopener" title="Bluesky" aria-label="bluesky">
-          <i class="fas fa-cloud"></i>
+        <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" rel="noopener" title="Bluesky">
+          <i class="fa-brands fa-bluesky"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=YOURID" target="_blank" rel="noopener" title="Google Scholar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
         </a>
       </div>
       <div class="hero-bio">
@@ -105,8 +108,40 @@
       <a href="research.html" class="see-all-link">See all research</a>
     </div>
   </section>
+  <section id="projects" style="background:var(--bg-alt)">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="card-list">
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="projects.html">Project Title One</a></h3>
+            <p>Brief description of the project. What was the goal, the tools used, and what was achieved.</p>
+            <div class="tag-links" style="margin-top:0.5rem"><a href="#" class="tag-link">GitHub</a><a href="#" class="tag-link">Demo</a></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3><a href="projects.html">Project Title Two</a></h3>
+            <p>Brief description of the project. What was the goal, the tools used, and what was achieved.</p>
+            <div class="tag-links" style="margin-top:0.5rem"><a href="#" class="tag-link">GitHub</a></div>
+          </div>
+        </div>
+      </div>
+      <a href="projects.html" class="see-all-link">See all projects</a>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-simple">
+        <p><i class="fas fa-map-marker-alt contact-icon"></i> <span>Indonesia</span></p>
+        <p><i class="fas fa-envelope contact-icon"></i> <a href="mailto:yudha.ikhsan1993@gmail.com">yudha.ikhsan1993@gmail.com</a></p>
+        <p><i class="fab fa-linkedin contact-icon"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">Book an appointment</a></p>
+      </div>
+    </div>
+  </section>
   <footer>
-    <p>&copy; <span id="year"></span> Yudha Ikhsan &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
+    <p>&copy; <span id="year"></span> Yudha Ikhsan &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="mailto:yudha.ikhsan1993@gmail.com">Contact</a></p>
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -123,4 +158,4 @@
     document.addEventListener('keydown', function(e) { if(e.key==='Escape') closeDrawer(); });
   </script>
 </body>
-</html>
+                                                     </html>
