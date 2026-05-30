@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Academic Profile</title>
+  <title>Yudha Ikhsan</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,21 +26,30 @@
     <button class="hamburger" id="hamburgerBtn" onclick="toggleDrawer()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <a href="index.html" class="navbar-brand">YOUR NAME</a>
+    <a href="index.html" class="navbar-brand">YUDHA IKHSAN</a>
   </header>
   <section class="hero">
     <div class="container">
       <div class="hero-photo"></div>
       <div class="social-links">
-        <a href="https://substack.com/@yourhandle" target="_blank" rel="noopener" title="Substack">S</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" title="LinkedIn">in</a>
-        <a href="https://x.com/yourhandle" target="_blank" rel="noopener" title="X">&#120143;</a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener" title="GitHub">GH</a>
-        <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" rel="noopener" title="Bluesky">Bsky</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" title="LinkedIn" aria-label="linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/yourhandle" target="_blank" rel="noopener" title="X / Twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/yudaikhsan" target="_blank" rel="noopener" title="GitHub" aria-label="github">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://substack.com/@yourhandle" target="_blank" rel="noopener" title="Substack" aria-label="substack">
+          <i class="fas fa-rss"></i>
+        </a>
+        <a href="https://bsky.app/profile/yourhandle.bsky.social" target="_blank" rel="noopener" title="Bluesky" aria-label="bluesky">
+          <i class="fas fa-cloud"></i>
+        </a>
       </div>
       <div class="hero-bio">
-        <p>Write your bio here. Describe your academic background, research interests, and affiliations.</p>
-        <p>Add a second paragraph about your work, publications, or teaching interests.</p>
+        <p>Computational social science.</p>
       </div>
       <a href="cv.html" class="btn-outline">Download CV</a>
     </div>
@@ -95,7 +106,7 @@
     </div>
   </section>
   <footer>
-    <p>&copy; <span id="year"></span> Your Name &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
+    <p>&copy; <span id="year"></span> Yudha Ikhsan &nbsp;&middot;&nbsp; <a href="index.html">Home</a> &nbsp;&middot;&nbsp; <a href="contact.html">Contact</a></p>
   </footer>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
