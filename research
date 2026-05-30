@@ -1,95 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research – Scholar on Fire</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        .page-container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 20px;
-        }
-        .page-container h1 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #1e2a3a;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .item-card {
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .item-card:last-of-type {
-            border-bottom: none;
-        }
-        .item-tag {
-            display: inline-block;
-            background: #eaf4fb;
-            color: #3498db;
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .item-title {
-            font-size: 1.4rem;
-            margin: 0 0 8px 0;
-        }
-        .item-title a {
-            color: #1e2a3a;
-            text-decoration: none;
-        }
-        .item-title a:hover {
-            color: #3498db;
-        }
-        .item-excerpt {
-            color: #555;
-            line-height: 1.6;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            color: #1e2a3a;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="display: block; background: #f4f6f9;">
+<body>
 
-    <div class="page-container">
-        <h1>🔬 Research</h1>
+  <div class="nav-overlay" id="navOverlay" onclick="closeDrawer()"></div>
+  <nav class="nav-drawer" id="navDrawer">
+    <ul>
+      <li><a href="index.html" onclick="closeDrawer()">Home</a></li>
+      <li><a href="posts.html" onclick="closeDrawer()">Posts</a></li>
+      <li><a href="research.html" onclick="closeDrawer()">Research</a></li>
+      <li><a href="courses.html" onclick="closeDrawer()">Courses</a></li>
+      <li><a href="cv.html" onclick="closeDrawer()">CV</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Contact</a></li>
+    </ul>
+  </nav>
 
-        <div class="item-card">
-            <span class="item-tag">Quantum Computing</span>
-            <h2 class="item-title"><a href="research/research1.html">Research 1: Quantum Computing</a></h2>
-            <p class="item-excerpt">Exploring the principles of quantum mechanics applied to computational systems, including qubits, superposition, and entanglement-based algorithms.</p>
-        </div>
+  <header class="navbar">
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleDrawer()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="navbar-brand">YOUR NAME</a>
+  </header>
 
-        <div class="item-card">
-            <span class="item-tag">Climate Science</span>
-            <h2 class="item-title"><a href="research/research2.html">Research 2: Climate Modeling</a></h2>
-            <p class="item-excerpt">A deep dive into numerical climate simulation techniques, atmospheric data processing, and predictive modeling for environmental forecasting.</p>
-        </div>
-
-        <div class="item-card">
-            <span class="item-tag">NLP</span>
-            <h2 class="item-title"><a href="research/research3.html">Research 3: NLP Study</a></h2>
-            <p class="item-excerpt">An investigation into natural language processing methods, covering tokenization, transformers, and real-world text classification tasks.</p>
-        </div>
-
-        <a href="index.html" class="back-link">← Back to Portfolio</a>
+  <div class="page-header" style="background:var(--bg-alt)">
+    <div class="container">
+      <h1>Research</h1>
     </div>
+  </div>
 
+  <section>
+    <div class="container">
+
+      <!-- Working Papers -->
+      <div class="cv-section">
+        <h2>Working Papers</h2>
+      </div>
+
+      <div class="research-card">
+        <div class="research-card-body">
+          <h3><a href="#">Paper Title One</a></h3>
+          <p>Full abstract of your research paper. Describe the research question, methodology, and main findings clearly.</p>
+          <div class="tag-links">
+            <a href="#" class="tag-link">PDF</a>
+            <a href="#" class="tag-link">Slides</a>
+            <a href="#" class="tag-link">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-card-body">
+          <h3><a href="#">Paper Title Two</a></h3>
+          <p>Full abstract of your research paper. Describe the research question, methodology, and main findings clearly.</p>
+          <div class="tag-links">
+            <a href="#" class="tag-link">PDF</a>
+            <a href="#" class="tag-link">Slides</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Published Papers -->
+      <div class="cv-section" style="margin-top:2.5rem">
+        <h2>Published Papers</h2>
+      </div>
+
+      <div class="research-card">
+        <div class="research-card-body">
+          <h3><a href="#">Published Paper Title</a></h3>
+          <p><em>Journal Name, Volume(Issue), Year</em></p>
+          <p>Full abstract of your published paper. Describe the research question, methodology, and main findings.</p>
+          <div class="tag-links">
+            <a href="#" class="tag-link">DOI</a>
+            <a href="#" class="tag-link">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work in Progress -->
+      <div class="cv-section" style="margin-top:2.5rem">
+        <h2>Work in Progress</h2>
+      </div>
+
+      <div class="research-card">
+        <div class="research-card-body">
+          <h3>Work in Progress Title</h3>
+          <p>Brief description of ongoing research project.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Your Name &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleDrawer() {
+      document.getElementById('navDrawer').classList.toggle('open');
+      document.getElementById('navOverlay').classList.toggle('open');
+      document.getElementById('hamburgerBtn').classList.toggle('open');
+    }
+    function closeDrawer() {
+      document.getElementById('navDrawer').classList.remove('open');
+      document.getElementById('navOverlay').classList.remove('open');
+      document.getElementById('hamburgerBtn').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => { if(e.key==='Escape') closeDrawer(); });
+  </script>
 </body>
 </html>
