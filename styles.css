@@ -382,3 +382,10 @@ footer a:hover { color: var(--primary); }
   .container { padding: 0 1rem; }
   section { padding: 2.5rem 0; }
 }
+
+
+/* ===== FONT AWESOME SOCIAL ICONS ===== */
+.social-links a i {
+  font-size: 1rem;
+  line-height: 1;
+}
